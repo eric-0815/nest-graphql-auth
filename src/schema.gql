@@ -2,6 +2,11 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+input CreateUserInput {
+  password: String!
+  username: String!
+}
+
 type LoginResponse {
   access_token: String!
   user: User!
@@ -14,6 +19,7 @@ input LoginUserInput {
 
 type Mutation {
   login(loginUserInput: LoginUserInput!): LoginResponse!
+  signup(createUserInput: CreateUserInput!): User!
 }
 
 type Query {
