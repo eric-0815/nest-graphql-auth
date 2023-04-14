@@ -15,6 +15,7 @@ export class UsersResolver {
 
   @Query(() => [User], { name: 'users' })
   findAll() {
+    //TODO: project with JWT
     return this.usersService.findAll();
   }
 
