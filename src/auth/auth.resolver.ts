@@ -9,12 +9,12 @@ import { CreateUserInput } from 'src/users/dto/create-user.input';
 
 @Resolver()
 export class AuthResolver {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) { }
 
   @Mutation(() => LoginResponse)
   @UseGuards(GqlAuthGuard)
   login(@Args('loginUserInput') loginUserInput: LoginUserInput) {
-    console.log(loginUserInput);
+    console.log('loginUserInput: ', loginUserInput);
     return this.authService.login(loginUserInput);
   }
 

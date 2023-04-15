@@ -35,7 +35,8 @@ export class UsersService {
   }
 
   findOne(username: string) {
-    return this.users.find((user) => user.username === username);
+    const user = this.users.find((user) => user.username === username);
+    return user;
   }
 
   // update(id: number, updateUserInput: UpdateUserInput) {
